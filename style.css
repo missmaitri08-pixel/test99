@@ -1,0 +1,328 @@
+:root {
+  --bg-primary: #14100e;
+  --bg-secondary: #1e1815;
+  --bg-card: #251e1a;
+  --text-main: #e8dcc8;
+  --text-muted: #b5a692;
+  --accent-gold: #c5a059;
+  --accent-copper: #8c583a;
+  --border-subtle: rgba(197, 160, 89, 0.22);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 20% 20%, rgba(140, 88, 58, 0.12), transparent 45%),
+                    radial-gradient(circle at 80% 80%, rgba(197, 160, 89, 0.08), transparent 45%);
+  color: var(--text-main);
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.75;
+  padding: 0 1.25rem;
+}
+
+/* Navigation */
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-gold);
+}
+
+/* Main Container */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 span {
+  font-style: italic;
+  color: var(--accent-gold);
+  font-weight: 500;
+}
+
+.hero p {
+  max-width: 650px;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  margin-bottom: 2rem;
+}
+
+.hero-meta {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-secondary);
+  font-size: 0.88rem;
+  color: var(--text-main);
+  letter-spacing: 0.03em;
+}
+
+/* Section Styling */
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-header {
+  margin-bottom: 2.25rem;
+}
+
+.section-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--accent-gold);
+  font-size: 1.15rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-main);
+}
+
+/* Education Timeline */
+.edu-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.edu-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-gold);
+  padding: 1.5rem 1.75rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-gold);
+}
+
+.edu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.edu-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.edu-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--accent-gold);
+  background: rgba(197, 160, 89, 0.1);
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--border-subtle);
+}
+
+.edu-inst {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.96rem;
+}
+
+/* Skills & Interests */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-box {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 1.6rem;
+}
+
+.skill-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.45rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag {
+  font-size: 0.86rem;
+  padding: 0.3rem 0.75rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.project-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 1.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  border-color: var(--accent-gold);
+}
+
+.project-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.35rem;
+}
+
+.project-stack {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent-gold);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.85rem;
+}
+
+/* Beyond the Screen */
+.curiosities {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 2rem;
+  position: relative;
+}
+
+.curiosities blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-style: italic;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.curiosities p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+/* Footer */
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 0 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.version-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent-gold);
+  border: 1px solid var(--border-subtle);
+  padding: 0.25rem 0.7rem;
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 3.5rem 0 3rem; }
+  section { padding: 3rem 0; }
+  .nav-links { gap: 1.1rem; }
+}
